@@ -1,0 +1,6 @@
+# Request log, written by the scheduled task at runtime.
+server.log
+
+# Python
+__pycache__/
+*.py[cod]
