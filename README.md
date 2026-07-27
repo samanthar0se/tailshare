@@ -26,9 +26,10 @@ at logon.
 powershell -ExecutionPolicy Bypass -File install.ps1
 ```
 
-This junctions `skill\` into `~\.claude\skills\share` and registers a
-`ShareServer` scheduled task that starts at logon, windowless. No elevation
-needed — directory junctions and high ports are both unprivileged.
+This junctions `skill\` into the global skill directories for shared agents,
+Pi, Codex, and Claude, then registers a `ShareServer` scheduled task that starts
+at logon, windowless. No elevation needed — directory junctions and high ports
+are both unprivileged.
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File install.ps1 -Uninstall
@@ -40,7 +41,7 @@ powershell -ExecutionPolicy Bypass -File install.ps1 -Uninstall
 |---|---|
 | `share_server.py` | the server |
 | `install.ps1` | install / uninstall |
-| `skill\SKILL.md` | the agent-facing skill, junctioned into `~\.claude\skills\share` |
+| `skill\SKILL.md` | the agent-facing skill, junctioned into each global agent skill directory |
 | `server.log` | request log (gitignored) |
 | `C:\git\.share\` | served root — scratch output, deliberately outside this repo |
 

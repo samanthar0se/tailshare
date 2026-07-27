@@ -46,4 +46,4 @@ Work down this list; it is ordered by how often each is the cause.
 - `C:\git\.share\` — served root, world-readable to your tailnet. Not in the repo; it is scratch output.
 - `C:\git\tailshare\` — the repo: server, installer, and this skill
 - `C:\git\tailshare\server.log` — request log
-- `~\.claude\skills\share` — a **junction** to `C:\git\tailshare\skill`. Edit the file in the repo; there is only one copy.
+- `~\.agents\skills\share`, `~\.pi\agent\skills\share`, `~\.codex\skills\share`, and `~\.claude\skills\share` — **junctions** to `C:\git\tailshare\skill`. Edit the file in the repo; there is only one copy.
